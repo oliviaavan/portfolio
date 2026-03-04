@@ -69,8 +69,8 @@ export default function Atlas() {
       style={{ fontFamily: "var(--font-inter), sans-serif" }}
     >
       {/* Navigation */}
-      <nav className="px-10 py-5">
-        <div className="max-w-[860px] mx-auto flex items-center justify-between">
+      <nav className="py-5">
+        <div className="max-w-[860px] mx-auto flex items-center justify-between px-[18px]">
           <a
             href="/"
             className="flex items-center gap-1.5 text-[#1a1a1a] hover:opacity-50 transition-opacity duration-200"
@@ -84,7 +84,7 @@ export default function Atlas() {
             </span>
           </a>
           <ul className="flex gap-8 text-[13px] text-[#1a1a1a]">
-            {["Work", "Play", "About", "Resume"].map((item) => (
+            {["Work", "About", "Resume"].map((item) => (
               <li key={item}>
                 <a
                   href={`/#${item.toLowerCase()}`}
@@ -98,14 +98,12 @@ export default function Atlas() {
         </div>
       </nav>
 
-      <hr className="border-[#e0e0e0]" />
 
       <div className="max-w-[860px] mx-auto px-10">
 
         {/* Title */}
         <h1
-          className="text-[80px] leading-none text-[#1a1a1a] mt-14 mb-10"
-          style={{ fontFamily: "var(--font-playfair), serif", fontStyle: "italic" }}
+          className="text-[48px] font-semibold leading-none text-[#1a1a1a] mt-14 mb-10"
         >
           Atlas
         </h1>
