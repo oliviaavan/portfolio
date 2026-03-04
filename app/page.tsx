@@ -1,23 +1,27 @@
 const projects = [
   {
-    title: "HearBat",
+    title: "Google Award-Winning Auditory Rehabilitation App with HearBat",
     description:
       "Top 100 global winner for HearBat, an app that helps cochlear implant users strengthen their hearing through gamified training.",
+    href: "/hearbat",
   },
   {
     title: "UX Validation for Construction Accounting Platform at Trimble",
     description:
       "Designed and usability-tested high-fidelity prototypes, focusing on validating workflows, dashboards, and financial views with small business contractors.",
+    href: "#",
   },
   {
     title: "Community Driven Discovery Mobile App with Atlas",
     description:
       "Designed a community built map that challenges algorithm driven discovery by surfacing overlooked local spots, stories, and shared experiences across Oregon.",
+    href: "/atlas",
   },
   {
     title: "Between",
     description:
       "An AI-driven wearable and app that helps long distance couples, friends, and families stay emotionally connected through haptics, mood sharing, and gentle daily rituals.",
+    href: "#",
   },
 ];
 
@@ -39,7 +43,7 @@ export default function Home() {
           >
             <span className="text-[13px]">✦</span>
             <span
-              className="text-[15px]"
+              className="text-[20px]"
               style={{ fontFamily: "var(--font-playfair), serif", fontStyle: "italic" }}
             >
               OV
@@ -68,19 +72,19 @@ export default function Home() {
         {/* Hero */}
         <section className="pt-20 pb-6">
           <h1
-            className="text-[88px] leading-none text-[#1a1a1a] mb-4"
+            className="text-[80px] leading-none text-[#1a1a1a] mb-4"
             style={{ fontFamily: "var(--font-playfair), serif", fontStyle: "italic" }}
           >
             olivia
           </h1>
-          <p className="text-[14px] text-[#4a4a4a] leading-relaxed">
+          <p className="text-[16px] text-[#4a4a4a] leading-relaxed">
             is a sponge that absorbs any and all knowledge. Currently at Trimble.
           </p>
         </section>
 
         {/* Sparkle divider */}
         <div
-          className="py-5 text-[#aaaaaa] text-[12px] tracking-[0.15em] overflow-hidden whitespace-nowrap select-none"
+          className="py-5 text-[#aaaaaa] text-[20px] tracking-[0.15em] overflow-hidden whitespace-nowrap select-none"
           aria-hidden="true"
         >
           {(SPARKLE + " ").repeat(8)}
@@ -89,7 +93,7 @@ export default function Home() {
         {/* Projects */}
         <section id="work" className="py-12 flex flex-col gap-14">
           {projects.map((project, i) => (
-            <article key={i} className="group cursor-pointer">
+            <a key={i} href={project.href} className="group block hover:opacity-80 transition-opacity duration-200">
               {/* Image placeholder */}
               <div
                 className="w-full bg-[#e8e8e8] rounded-xl mb-4 overflow-hidden"
@@ -97,13 +101,13 @@ export default function Home() {
               />
 
               {/* Project info */}
-              <h2 className="text-[13px] font-semibold text-[#1a1a1a] mb-1 leading-snug">
+              <h2 className="text-[16px] font-semibold text-[#1a1a1a] mb-1 leading-snug">
                 {project.title}
               </h2>
-              <p className="text-[13px] text-[#6a6a6a] leading-relaxed max-w-[680px]">
+              <p className="text-[13px] text-[#6a6a6a] leading-relaxed">
                 {project.description}
               </p>
-            </article>
+            </a>
           ))}
         </section>
 
